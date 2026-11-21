@@ -1,0 +1,73 @@
+(?i)Inspector
+(?i)x-[\w-]+
+.NET Beautifier
+A-Z 
+APIs?
+Channel:
+Cookie [jJ]ar
+Cookie[:s]
+E dd.MM.yyyy
+Extender:
+HTML|CSS|URL|XML|Gzip|Flash|GBK|Body|CPU|Burp|Host|IP|Light|Dark
+HTTP/\d
+HTTPS?|WebSocket
+January|February|March|April|May|June|July|August|September|October|November|December
+JavaScript|Java|Python|Ruby|MB
+NTLMv\d+
+Nadeem Douba
+Null payloads
+REST API
+Raw|Plain|Octal|Hex|Binary|Basic
+SHA\w*-\d+(/\d+)?
+SHA|TIGER|WHIRLPOOL|RTFM|TLS
+Scanner:
+Script
+TLS Ciphers
+User-Agent:
+\d+ \(\w+\)
+\d+[A-Za-z]+
+a-z
+abcdefghijklmnopqrstuvwxyz0123456789
+asp,aspx,jsp,php
+b[A-Z]\w+
+js,gif,jpg,png,css
+lbl\w+
+payload|Text|Key
+Unlimited
+\w{3} \w{3} \d+ \d+:\d+:\d+ \w+ \d+
+(burp|javax)\..*
+[\w-]+\.[\w-]+
+\w{3} \w{3} \d+ \d{2}:\d{2}:\d{2} \w{3} \d{4} .*
+[a-zA-Z\d]+\(.+
+# 字母数字开头下划线
+[a-zA-Z\d]+_.+
+# 中间大写字母
+[a-zA-Z]+[A-Z]+[a-zA-Z]+
+# 中间大写字母
+.+\(String input\)
+# 中间-+:.连接的 无空格长串
+[a-zA-Z\d]+(?:[-:.+][a-zA-Z\d]+)+
+# 字母+数字
+\w+\d+
+# 协议链接
+\w+://.+
+# 非字符
+\W+
+# 日期
+\d+(/\d+)+
+# 文件路径
+\w:(?:[\\/][^\\/]+)+
+# Intruder
+\d+ of \d+
+Result #\d+
+# 数字.
+\d+\.
+# .数字
+\.\d+
+# 正则
+\^.*\$
+# 键值对 含-
+[\w-]+-[\w-]+:.+
+# 下划线开头
+_\w+
+url

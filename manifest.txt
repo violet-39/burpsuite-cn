@@ -1,0 +1,7 @@
+Premain-Class: leon406.Agent
+Agent-Class: leon406.Agent
+Can-Retransform-Classes: true
+Implementation-Title: Burp Suite Chinese Language Pack
+Implementation-Version: 1.0.0
+Implementation-Vendor: WorkBuddy
+

@@ -1,0 +1,19 @@
+Burp Suite 中文语言包
+Copyright 2026 violet-39
+
+本项目的翻译词库（res/cn.txt、res/white.txt）来自：
+  Leon406 / BurpSuiteCN-Release
+  https://github.com/Leon406/BurpSuiteCN-Release
+  许可证：Apache License 2.0
+
+注入层（src/leon406/Agent.java、CnTransformer.java、CnTranslator.java、LruCache.java）
+为本项目重写，用于替代原项目中依赖 javassist 与 jdk.internal ASM 的实现，
+使其可在 Java 21 ~ 25 上正常运行。
+
+运行时依赖：
+  ASM 9.11.1 (org.ow2.asm:asm) — BSD 3-Clause
+  https://gitlab.ow2.org/asm/asm
+
+本项目仅做界面文本翻译，不修改 Burp Suite 本体文件，不涉及任何授权或
+许可绕过。Burp Suite 是 PortSwigger 公司的商业软件，请在遵守其许可协议
+的前提下使用。

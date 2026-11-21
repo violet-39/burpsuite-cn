@@ -1,0 +1,50 @@
+name: build
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Build jar
+        run: bash build.sh
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: burpsuite-cn
+          path: burpsuite-cn.jar
+
+      - name: Read version
+        id: v
+        run: echo "tag=v$(cat VERSION)" >> "$GITHUB_OUTPUT"
+
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.v.outputs.tag }}
+          name: Burp Suite 中文语言包 ${{ steps.v.outputs.tag }}
+          body: |
+            自动构建产物，适用于 Burp Suite 2026.11.2（内置 Java 25），同样兼容 Java 21/24。
+
+            **用法**：把 `burpsuite-cn.jar` 放进 Burp 安装目录，在 `user.vmoptions` 里加一行：
+
+            ```
+            -javaagent:<安装目录>\burpsuite-cn.jar=han
+            ```
+
+            详见 README。
+          files: burpsuite-cn.jar
